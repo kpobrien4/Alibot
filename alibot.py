@@ -13,6 +13,10 @@ import requests
 # ACCESS_KEY = os.environ.get('ACCESS_KEY')
 # ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 
+resp = requests.get(api_url)
+for data in resp.json():
+    crime_description = data["ofns_desc"]
+    print(crime_description)
 
 INTERVAL = 60 * 60 * 6  # tweet every 6 hours
 # INTERVAL = 15  tweet every 15 seconds
@@ -22,7 +26,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 def hello():
-    return("I'm at the grocery store, " + str(random()))
+    return("I'm at the grocery store, " + crime_description)
 
 
 while True:
