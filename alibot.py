@@ -25,12 +25,12 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-def hello():
-    return("I'm at the grocery store, " + crime_description)
+def alibi():
+    return("I'm at the grocery store, NOT" + crime_description.lower())
 
 
 while True:
-    print("Tweeting...")
-    helloVar = hello()
-    api.update_status(helloVar)
+    print("Crafting the perfect alibi...")
+    alibiVar = alibi()
+    api.update_status(alibiVar)
     time.sleep(INTERVAL)
