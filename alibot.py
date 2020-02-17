@@ -5,16 +5,16 @@ import time
 import json
 import requests
 import random
-from alibi import *
+from alibis import *
 
 
 resp = requests.get(api_url)
-desc = random.choice(resp.json())["pd_desc"]
-for data in resp.json():
-    crime_description = data["pd_desc"]
+desc = resp.json()[0]["pd_desc"]
+# for data in resp.json():
+#     crime_description = data["pd_desc"]
 
-INTERVAL = 60 * 60 * 6  # tweet every 6 hours
-# INTERVAL = 15  tweet every 15 seconds
+#INTERVAL = 60 * 60 * 6  # tweet every 6 hours
+INTERVAL = 15  # tweet every 15 seconds
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
