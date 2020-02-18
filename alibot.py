@@ -1,11 +1,12 @@
 import tweepy
 from keys import *
-from alibis import *
 import sys
 import time
 import json
 import requests
 import random
+
+alibis = ["At the grocery store", "Watching a movie with Howie Mandell", "Reading about current events", "At a Chicago White Socks game", "Narrating an audio book", "Partying at the White House", "Observing a UFO"]
 
 resp = requests.get(api_url)
 desc = resp.json()[0]["pd_desc"]

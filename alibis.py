@@ -1,1 +1,0 @@
-alibis = ["At the grocery store", "Watching a movie with Howie Mandell", "Reading about current events", "At a Chicago White Socks game", "Narrating an audio book", "Partying at the White House", "Observing a UFO"]
