@@ -1,11 +1,16 @@
 import tweepy
 from keys import *
-from server import *
 import sys
 import time
 import json
 import requests
 import random
+from os import environ
+
+CONSUMER_KEY = environ['CONSUMER_KEY']
+CONSUMER_SECRET = environ['CONSUMER_SECRET']
+ACCESS_KEY = environ['ACCESS_KEY']
+ACCESS_SECRET = environ['ACCESS_SECRET']
 
 alibis = ["At the grocery store", "Watching a movie with Howie Mandell", "Reading about current events", "At a Chicago White Socks game", "Narrating an audio book", "Partying at the White House", "Observing a UFO"]
 
