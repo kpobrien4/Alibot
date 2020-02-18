@@ -4,8 +4,8 @@ import time
 import json
 import requests
 import random
-from os import environ
 
+from os import environ
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
