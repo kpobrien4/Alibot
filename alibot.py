@@ -1,17 +1,14 @@
 import tweepy
 from keys import *
+from alibis import *
 import sys
 import time
 import json
 import requests
 import random
-from alibis import *
-
 
 resp = requests.get(api_url)
 desc = resp.json()[0]["pd_desc"]
-# for data in resp.json():
-#     crime_description = data["pd_desc"]
 
 #INTERVAL = 60 * 60 * 6  # tweet every 6 hours
 INTERVAL = 15  # tweet every 15 seconds
@@ -22,7 +19,6 @@ api = tweepy.API(auth)
 
 def alibi():
     return(random.choice(alibis) + ", NOT committing " + desc.lower())
-
 
 while True:
     print("Crafting the perfect alibi...")
